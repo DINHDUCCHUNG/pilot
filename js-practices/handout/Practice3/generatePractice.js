@@ -43,5 +43,4 @@ function generate(testLengthArray) {
 
   // Remove this line and change to your own algorithm
 }
-console.log(generate([17, 2, 3, 4]));
 module.exports = generate;
