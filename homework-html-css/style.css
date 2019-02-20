@@ -1,0 +1,87 @@
+#header {
+  /* width: 1520px;
+    height: 400px; */
+  margin: 0 auto;
+  display: block;
+}
+#p1 {
+  font-weight: bold;
+  font-size: 2em;
+  border: 5px solid white;
+  padding: 0px 0px 0px 275px;
+  margin: 5px 0px 5px 0px;
+}
+#p2 {
+  color: gray;
+  border: 1px solid white;
+  padding: 0px 0px 0px 280px;
+  margin: 5px 0px 5px 0px;
+}
+.group{
+    position: relative;
+    height: 400px;
+}
+.group1{
+    position: relative;
+    float:left;
+    width: 940px;
+}
+.group2{
+    position: relative;
+    float: left;
+    width: 100px;
+}
+#mexico,
+#tokyo,
+#newyork,
+#paris {
+  width: 300px;
+  height: 200px;
+  border: 1px solid white;
+  padding: 0px 0px 0px 275px;
+  margin: 0px 0px 10px 5px;
+}
+#tokyo,#paris {
+  width: 300px;
+  height: 200px;
+  border: 1px solid white;
+  padding: 0px 0px 0px 15px;
+  margin: 0px 0px 10px 5px;
+}
+#travel {
+  width: 280px;
+  height: 415px;
+  margin: 0px 0px 0px 0px;
+}
+.footer{
+    position: relative;
+}
+.footer1{
+    position: relative;
+    float:left;
+    width: 600px;
+}
+.footer2{
+    position: relative;
+    float: left;
+    width: 340px;
+}
+.footer3{
+    position: relative;
+    float: left;
+    width: 300px;
+}
+.f1{
+    border: 1px solid white;
+    padding: 0px 0px 0px 230px;
+    margin: 50px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.f2, .f3{
+    border: 1px solid white;
+    padding: 0px 0px 0px 5px;
+    margin: 50px 0px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
