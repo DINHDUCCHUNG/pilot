@@ -5,6 +5,7 @@
     text-align: center;
     padding: 15px 50px 15px 50px;
 }
+
 .i1, .i2{
     padding: 15px 50px 15px 50px;
 }
@@ -13,17 +14,28 @@
     background-color: #9CD08F;
     color: #FFFFFF
 }
+.i2{
+    position: relative;
+    display: inline-block;
+}
+
 .menu_vertical{
+    display: none;
+    position: absolute;
     width: 150px;
     text-align: left;
     padding:10px 5px 10px;
 }
 
-
 .menu_vertical .i1, .menu_vertical .i2{
     display: block;
     width: 50px;
-    margin: 5px 10px 5px 10px;
     border-bottom: white solid 2px;
     text-align: center;
+}
+.menu_vertical .menu_vertical{
+    left: 100%;
+}
+span:hover >.menu_vertical{
+    display: block;
 }
