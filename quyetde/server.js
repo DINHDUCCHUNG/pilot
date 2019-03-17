@@ -27,11 +27,12 @@ mongoose.connect("mongodb://localhost:27017/quyetde", error => {
   });
 
   server.get("/random-question", async (req, res) => {
-    try{const randomQuestion = await questionModel.aggregate([
+    try{
+      const randomQuestion = await questionModel.aggregate([
       {$sample: {size: 1}}
     ]);
     console.log(randomQuestion);
-    res.status(200).json(randomQuestion);
+    res.status(200).json(randomQuestion[0]);
     } catch(error){
       res.status(500).end(error.message);
     }
@@ -140,6 +141,8 @@ mongoose.connect("mongodb://localhost:27017/quyetde", error => {
     //   });
     // });
   });
+
+
   server.post("/vote/:questionId/:vote", async (req, res) => {
       
     const { questionId, vote } = req.params;
@@ -149,7 +152,7 @@ mongoose.connect("mongodb://localhost:27017/quyetde", error => {
       res.status(404).end('Question not found');
     }
     else{
-      await questionModel.findByIdAndUpdate(questionId,{[vote]:{$inc: 1}}).exec();
+      await questionModel.findByIdAndUpdate(questionId,{$inc: {[vote]: 1}}).exec();
       res.status(200).end('Update Question');
     }
 

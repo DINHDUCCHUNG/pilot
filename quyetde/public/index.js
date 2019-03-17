@@ -4,19 +4,19 @@ $(document).ready(()=>{
         url:`/random-question`,
         type: 'GET',
         success: (data)=>{
-            if(data.id != null){
+            if(data._id != null){
                 document.getElementById('question').innerText = data.content;
 
                 //listen click
                 
                 document.getElementById('vote-yes').addEventListener('click',()=>{
                     $.ajax({
-                        url: `/vote/${data.id}/yes`,
-                        type: 'GET',
+                        url: `/vote/${data._id}/yes`,
+                        type: 'POST',
                         success: (data1)=>{
-                            window.location.href = `/result/${data.id}`;
+                            window.location.href = `/result/${data._id}`;
                         },
-                        error: ()=>{
+                        error: (error)=>{
                             console.log(error);
                         },
                     });
@@ -24,19 +24,19 @@ $(document).ready(()=>{
                 
                 document.getElementById('vote-no').addEventListener('click',()=>{
                     $.ajax({
-                        url: `/vote/${data.id}/no`,
-                        type: 'GET',
+                        url: `/vote/${data._id}/no`,
+                        type: 'POST',
                         success: (data1)=>{
-                            window.location.href = `/result/${data.id}`;
+                            window.location.href = `/result/${data._id}`;
                         },
-                        error: ()=>{
+                        error: (error)=>{
                             console.log(error);
                         },
                     });
                 });
 
                 document.getElementById('question-result').addEventListener('click',()=>{
-                    window.location.href = `/result/${data.id}`;
+                    window.location.href = `/result/${data._id}`;
                 });
 
                 document.getElementById('other-question').addEventListener('click',()=>{
