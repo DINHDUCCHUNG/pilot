@@ -1,0 +1,106 @@
+.custom-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .custom-container {
+      width: 700px;
+    }
+  }
+  @media (min-width: 992px) {
+    .custom-container {
+      width: 700px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .custom-container {
+      width: 700px;
+    }
+  }
+
+.title h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.title hr {
+    margin: 5px -20px 20px -20px;
+}
+
+.sum-of-score {
+    background: #BF1363;
+    color: #fff;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+.player-name {
+    color: #333;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+.round-item {
+    color: #333;
+    padding: 10px 0px;
+    font-weight: 600;
+    background: #FBFEF9;
+}
+
+.round-item input {
+    width: 70%;
+    border-radius: 7px;
+    border-color: #495057;
+    border: 1px solid #ced4da;
+}
+
+.round-item input:hover {
+    box-shadow: 0 0 0 0.2rem #FF5E92;
+    border-color: #FF5E92;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none !important;
+}
+
+.round-item input:active, .round-item input:focus {
+    box-shadow: 0 0 0 0.2rem #FF5E92;
+    border-color: #FF5E92;
+    outline: none !important;
+}
+
+.hr-color hr {
+    color: #BF1363;
+    background: #BF1363;
+    height: 1px;
+    border: none;
+    margin: 5px -20px 0px;
+}
+
+.add-round-button {
+    background: #BF1363;
+    color: #fff;
+    border: 0 none;
+    outline: 0 none;
+    border-radius: 7px;
+    padding: 10px 50px;
+    transition: all 0.15s ease-in-out;
+}
+
+.add-round-button:hover {
+    background:#A51040;
+    box-shadow: 0 0 3px #CC144F;
+}
+
+.add-round-button:active {
+    box-shadow: 0 0 0 transparent;
+    transition: all 0;
+}
+
+.add-round {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+

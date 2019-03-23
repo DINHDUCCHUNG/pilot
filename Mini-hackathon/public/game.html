@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MiniHackathon</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/game.css" />
+  </head>
+  <body>
+    <div class="custom-container">
+      <div className="main">
+        <div class="title">
+          <h2>ScoreKeeper</h2>
+          <hr />
+        </div>
+        <div class="row player-name">
+          <div class="col-md-4"></div>
+          <div class="col-md-2">
+            <span id="player-name-1"></span>
+          </div>
+          <div class="col-md-2">
+            <span id="player-name-2"></span>
+          </div>
+          <div class="col-md-2">
+            <span id="player-name-3"></span>
+          </div>
+          <div class="col-md-2">
+            <span id="player-name-4"></span>
+          </div>
+        </div>
+        <div class="row sum-of-score">
+          <div class="col-md-4">Sum of score</div>
+          <div class="col-md-2" id = 'score-1'></div>
+          <div class="col-md-2" id = 'score-2'></div>
+          <div class="col-md-2" id = 'score-3'></div>
+          <div class="col-md-2" id = 'score-4'></div>
+        </div>
+        <form id="round-list">
+          <div class="row round-item">
+            <div class="col-md-4">Round 1</div>
+            <div class="col-md-2">
+              <input type="text" class="score-input" name="player1round1score" onkeyup="this.value=this.value.replace(/[^\d]/,'')"/>
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="score-input" name="player2round1score" onkeyup="this.value=this.value.replace(/[^\d]/,'')"/>
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="score-input" name="player3round1score" onkeyup="this.value=this.value.replace(/[^\d]/,'')"/>
+            </div>
+            <div class="col-md-2">
+              <input type="text" class="score-input" name="player4round1score" onkeyup="this.value=this.value.replace(/[^\d]/,'')"/>
+            </div>
+          </div>
+        </form>
+
+        <div class="hr-color">
+          <hr />
+        </div>
+        <div class="add-round row">
+          <button class="add-round-button" id="add-round-button">
+            ADD ROUND
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/game.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

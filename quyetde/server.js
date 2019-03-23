@@ -106,7 +106,6 @@ mongoose.connect("mongodb://localhost:27017/quyetde", error => {
   server.post("/create-question", async (req, res) => {
     const newQuestion = {
         content: req.body.content,
-
     };
 
     const result = await questionModel.create(newQuestion);
