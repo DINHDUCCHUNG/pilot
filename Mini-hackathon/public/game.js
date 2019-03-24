@@ -1,3 +1,5 @@
+
+
 $(document).ready(() => {
   const pageURL = $(location).attr("href");
   let gameId = pageURL.split("/").pop();
@@ -37,17 +39,34 @@ $(document).ready(() => {
     $("#round-list").append(round);
   });
   //listen round-list input
-  const form = document.getElementById("round-list");
   let gameScore = [];
+  let timeOut = undefined;
   document.getElementById("round-list").addEventListener("input", e => {
+    clearTimeout(timeOut);
     gameScore = [];
+    //GET all input in round-list into an array
     $("form#round-list :input").each(function() {
       var input = $(this); // This is the jquery object of the input, do what you will
-      console.log(input);
       let result = input[0].value;
       gameScore.push(result);
     });
     console.log(gameScore);
+    //Chia round
+    timeOut = setTimeout(()=>{
+      $.ajax({
+        url: `/score/${gameId}`,
+        type: 'POST',
+        data: {
+          round:JSON.stringify(gameScore),
+        },
+        success: (data) =>{
+          console.log(data);
+        },
+        error: (error)=>{
+          console.log(error);
+        }
+      });
+    },1000)
     let score_1 = 0;
     let score_2 = 0;
     let score_3 = 0;
